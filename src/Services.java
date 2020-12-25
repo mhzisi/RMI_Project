@@ -1,8 +1,12 @@
-public class Services implements MyInterface {
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class Services extends UnicastRemoteObject implements MyInterface {
     private float solde;
     
     // Constructor 
-    public Services(float solde){
+    public Services(float solde) throws RemoteException {
         this.solde = solde;
     }
 
